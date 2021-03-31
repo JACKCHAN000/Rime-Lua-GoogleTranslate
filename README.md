@@ -12,6 +12,7 @@ How to install
 
 
 How to use
+
 Trigger:```Control+t```
  1. Type english input
  2. Active the trigger
