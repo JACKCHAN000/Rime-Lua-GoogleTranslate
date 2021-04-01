@@ -9,8 +9,12 @@ local function make_url(input)
 end
 
 local function translator(input, seg)
-   --get the first Candidate
-   local reply = http.request(make_url(input))
+   local context = input
+   -- 'as space key
+   local string = context:gsub("%'", " ")
+   yield(Candidate("translate", seg.start, seg._end, string, "原文"))
+
+   local reply = http.request(make_url(string))
    local data = json.decode(reply)
 
    for i, v in ipairs(data) do
