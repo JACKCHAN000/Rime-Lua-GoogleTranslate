@@ -10,8 +10,7 @@ Based On https://github.com/hchunhui/librime-cloud
 
 英譯中:
 
-![final_606b23148efa0600b740d680_272103](https://user-images.githubusercontent.com/61930699/113588034-37ad5580-9662-11eb-83d3-306f6a3c6712.gif)
-
+![final_606b23148efa0600b740d680_363311](https://user-images.githubusercontent.com/61930699/113589246-b8b91c80-9663-11eb-8458-2312e69cfd92.gif)
 
 How to install
 1. Copy all files in ```weasel``` to the program folder of rime
@@ -27,6 +26,6 @@ How to use
 Trigger:```
 中譯英:Control+t
 英譯中:Control+e```
- 1. Type english input
- 2. Active the trigger
- 3. Return a chinese translate on the candidate bar
+ 1. Type the input
+ 2. Activate the trigger
+ 3. Return a translate on the candidate bar
