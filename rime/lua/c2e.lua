@@ -11,9 +11,9 @@ end
 
 
 local function translator(input, seg, env)
-   path = "C:\\Users\\JACK\\AppData\\Roaming\\Rime\\lua\\clip.txt"
-   file = io.open(path, "r")
-   for line in io.lines(path) do
+   Path = "C:\\Users\\JACK\\AppData\\Roaming\\Rime\\lua\\clip.txt"
+   File = io.open(Path, "r")
+   for line in io.lines(Path) do
       S = line
    end
    local reply = http.request(make_url(S))
@@ -26,6 +26,9 @@ local function translator(input, seg, env)
       -- add to Candidate
       yield(c)
    end
+   File = io.open(Path, "w")
+   io.write("")
+   io.close(File)
 end
 
 return translator

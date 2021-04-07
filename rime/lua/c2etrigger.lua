@@ -6,14 +6,15 @@ local function make(trig_key, trig_translator)
       local kNoop = 2
       local engine = env.engine
       local context = engine.context
-      local focus = context:get_commit_text()
+      local focus_text = context:get_commit_text()
 
       if key:repr() == trig_key then
 	 if context:is_composing() then
-       file = io.open("C:\\Users\\JACK\\AppData\\Roaming\\Rime\\lua\\clip.txt", "w")
-       io.output(file)
-       io.write(focus)
-       io.close(file)
+       Path = "C:\\Users\\JACK\\AppData\\Roaming\\Rime\\lua\\clip.txt"
+       File = io.open(Path, "w")
+       io.output(File)
+       io.write(focus_text)
+       io.close(File)
 	    flag = true
 	    context:refresh_non_confirmed_composition()
 	    return kAccepted
