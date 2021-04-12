@@ -28,7 +28,6 @@ local function make(trig_key, trig_translator)
    local function translator(input, seg, env)
       if flag then
 	 flag = false
-    print("hello")
 	 trig_translator(input, seg, env)
       end
    end
