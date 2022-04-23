@@ -10,13 +10,10 @@ end
 
 
 
+
 local function translator(input, seg, env)
-   Path = "C:\\Users\\JACK\\AppData\\Roaming\\Rime\\lua\\clip.txt"
-   File = io.open(Path, "r")
-   for line in io.lines(Path) do
-      S = line
-   end
-   local reply = http.request(make_url(S))
+   local string = env.focus_text
+   local reply = http.request(make_url(string))
    local data = json.decode(reply)
 
    for i, v in ipairs(data) do
@@ -26,9 +23,6 @@ local function translator(input, seg, env)
       -- add to Candidate
       yield(c)
    end
-   File = io.open(Path, "w")
-   io.write("")
-   io.close(File)
 end
 
 return translator
