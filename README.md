@@ -20,6 +20,7 @@ Google搜尋建議:
 
 How to install
 1. Windows: Copy all files in ```weasel``` to the program folder of rime
+
    Mac: Copy all files in ```squirrel``` to the program folder of rime```/Library/Input Methods/Squirrel.app/Contents/SharedSupport/```
 2. Edit the path of c2e.lua and c2etrigger.lua to your path
 3. Copy all files in ```rime``` to your user folder of rime
