@@ -1,11 +1,16 @@
 local json = require("json")
-local http = require("socket.http")
-local url = require("socket.url")
+local http = require("simplehttp")
+
+local function escape(s)
+   return (string.gsub(s, "([^A-Za-z0-9_])", function(c)
+       return string.format("%%%02x", string.byte(c))
+   end))
+end
 
 local function make_url(input)
    local sl = "en"
    local tl = "zh_TW"
-   return 'http://translate.googleapis.com/translate_a/single?client=gtx&sl='.. sl ..'&tl='.. tl ..'&dt=t&q='.. url.escape(input)
+   return 'http://translate.googleapis.com/translate_a/single?client=gtx&sl='.. sl ..'&tl='.. tl ..'&dt=t&q='.. escape(input)
 end
 
 local function translator(input, seg)
